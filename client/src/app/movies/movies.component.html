@@ -1,0 +1,9 @@
+
+<div *ngFor="let movie of (movies$ | async)">
+  <div class="">
+    <h1>
+      {{movie.title}}
+    </h1>
+    <img [src]="movie.imageUrl" alt="movie.title">
+  </div>
+</div>
