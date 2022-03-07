@@ -6,7 +6,8 @@ namespace Infrastructure.Services;
 
 public class MoviesServiceServices : IMoviesService
 {
-    private readonly Task<List<MovieJson>> _movies;
+    private readonly Task<List<MovieJson>> _movies; 
+    // the same task will always be returned, so it will be the same pointer the same list allways. 
     private readonly IMapper _mapper;
     
     public MoviesServiceServices(HttpClient client, IMapper mapper)
