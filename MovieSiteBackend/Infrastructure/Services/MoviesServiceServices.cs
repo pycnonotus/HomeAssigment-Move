@@ -6,15 +6,9 @@ namespace Infrastructure.Services;
 
 public class MoviesServiceServices : IMoviesService
 {
-    private Task<List<MovieMagic>> _movies;
-    private bool _loaded;
-    private Task<IEnumerable<MovieMagic>> _getMoviesTask;
-    private bool loaded = false;
-    
-
+    private readonly Task<List<MovieMagic>> _movies;
     private readonly IMapper _mapper;
-    private bool _moviesHasBeenLoaded = false; // bool is atomic 
-
+    
     public MoviesServiceServices(HttpClient client, IMapper mapper)
     {
         _movies = MoviesFetcher.GetMoviesAsync(client);
