@@ -64,7 +64,7 @@
         public List<Crew> Crew { get; set; }
     }
 
-    public class MovieMagic
+    public class MovieJson
     {
         public string Id { get; set; }
         public Image Image { get; set; }

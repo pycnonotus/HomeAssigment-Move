@@ -6,7 +6,7 @@ namespace Infrastructure.Services;
 
 public class MoviesServiceServices : IMoviesService
 {
-    private readonly Task<List<MovieMagic>> _movies;
+    private readonly Task<List<MovieJson>> _movies;
     private readonly IMapper _mapper;
     
     public MoviesServiceServices(HttpClient client, IMapper mapper)

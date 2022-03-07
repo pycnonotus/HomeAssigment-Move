@@ -7,7 +7,7 @@ public class MoviesProfile : Profile
 {
     public MoviesProfile()
     {
-        CreateMap<MovieMagic, Movie>()
+        CreateMap<MovieJson, Movie>()
             .ForMember(d => d.ImageUrl, o =>
                 o.MapFrom(s => s.Image.Url ))
             .ForMember(d => d.Id , o => o.MapFrom(s => IdNormalize(s.Id)))
